@@ -63,185 +63,185 @@
   <section class="bg-primary" id="example">
     <p>An example of timeseries at a site</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
-  <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"time"</span><span class="err">:</span> <span class="mi">25</span>
+<div class="language-javascript highlighter-rouge"><span class="p">{</span>
+  <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"time"</span><span class="p">:</span> <span class="mi">25</span>
   <span class="p">},</span> 
-  <span class="s2">"global_attributes"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"institution"</span><span class="err">:</span> <span class="s2">"MSL"</span><span class="p">,</span>  
-    <span class="s2">"history"</span><span class="err">:</span> <span class="s2">"2017-02-14 00:48:36 UTC : UDS Query: datum=msl&amp;xy=151.3,-33.8&amp;slfmt=bln&amp;fmt=nc&amp;var=hs,dpm,tp,hs_sw1,tp_sw1,dpm_sw1,hs_sw2,tp_sw2,dpm_sw2,hs_sea,tp_sea,dpm_sea,ugrd10m,vgrd10m,tmp2m&amp;type=fc,stat,tide,hc,rt&amp;bnd=151.300000,151.300000,-33.800000,-33.800000&amp;sort=quality,-res&amp;spinup=0.0&amp;stepback=1&amp;dset=gfs,mrf,ww3_gfs_glob-st4_lr&amp;dt=3&amp;dim=1,1&amp;time=20170214.000000,20170217.000000"</span>
+  <span class="s2">"global_attributes"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"institution"</span><span class="p">:</span> <span class="s2">"MSL"</span><span class="p">,</span>  
+    <span class="s2">"history"</span><span class="p">:</span> <span class="s2">"2017-02-14 00:48:36 UTC : UDS Query: datum=msl&amp;xy=151.3,-33.8&amp;slfmt=bln&amp;fmt=nc&amp;var=hs,dpm,tp,hs_sw1,tp_sw1,dpm_sw1,hs_sw2,tp_sw2,dpm_sw2,hs_sea,tp_sea,dpm_sea,ugrd10m,vgrd10m,tmp2m&amp;type=fc,stat,tide,hc,rt&amp;bnd=151.300000,151.300000,-33.800000,-33.800000&amp;sort=quality,-res&amp;spinup=0.0&amp;stepback=1&amp;dset=gfs,mrf,ww3_gfs_glob-st4_lr&amp;dt=3&amp;dim=1,1&amp;time=20170214.000000,20170217.000000"</span>
   <span class="p">},</span> 
-  <span class="s2">"variables"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"time"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"ISO8601 timestamps"</span>
+  <span class="s2">"variables"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"time"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"ISO8601 timestamps"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"lat"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{}</span>
+    <span class="s2">"lat"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{}</span>
     <span class="p">},</span> 
-    <span class="s2">"lon"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{}</span>
+    <span class="s2">"lon"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{}</span>
     <span class="p">},</span> 
-    <span class="s2">"site"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{}</span>
+    <span class="s2">"site"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{}</span>
     <span class="p">},</span> 
-    <span class="s2">"tmp2m"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"2 m above ground Temp. [K]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"K"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"tmp2m"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"2 m above ground Temp. [K]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"K"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"vgrd10m"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"10 m above ground v wind [m/s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"m/s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"vgrd10m"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"10 m above ground v wind [m/s]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m/s"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"ugrd10m"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"10 m above ground u wind [m/s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"m/s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"ugrd10m"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"10 m above ground u wind [m/s]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m/s"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"tp_sw1"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface swell period [s] "</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"tp_sw1"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface swell period [s] "</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"tp_sw2"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface secondary swell period [s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"tp_sw2"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface secondary swell period [s]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"hs"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface sig height of wind waves and swell [m]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"hs"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface sig height of wind waves and swell [m]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"tp"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface peak wave period [s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"tp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface peak wave period [s]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"hs_sw2"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface secondary swell height [m]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"hs_sw2"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface secondary swell height [m]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"hs_sw1"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface swell height [m] "</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"hs_sw1"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface swell height [m] "</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"tp_sea"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface mean period of wind waves [s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"tp_sea"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface mean period of wind waves [s]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"dpm_sw1"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface swell direction [deg]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"dpm_sw1"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface swell direction [deg]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"dpm"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface primary wave direction [deg]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"dpm"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface primary wave direction [deg]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"dpm_sw2"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface secondary swell direction [deg] "</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"dpm_sw2"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface secondary swell direction [deg] "</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"hs_sea"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface wave height wind waves [m]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"hs_sea"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface wave height wind waves [m]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">},</span> 
-    <span class="s2">"dpm_sea"</span><span class="err">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="err">:</span> <span class="s2">"surface direction of wind waves [deg]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="err">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="err">:</span> <span class="s2">"None"</span>
+    <span class="s2">"dpm_sea"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface direction of wind waves [deg]"</span><span class="p">,</span> 
+        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
+        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
       <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"time"</span>
       <span class="p">]</span>
     <span class="p">}</span>
   <span class="p">},</span> 
-  <span class="s2">"data"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"time"</span><span class="err">:</span> <span class="p">[</span>
+  <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"time"</span><span class="p">:</span> <span class="p">[</span>
       <span class="s2">"2017-02-14T00:00:00Z"</span><span class="p">,</span> 
       <span class="s2">"2017-02-14T03:00:00Z"</span><span class="p">,</span> 
       <span class="s2">"2017-02-14T06:00:00Z"</span><span class="p">,</span> 
@@ -268,10 +268,10 @@
       <span class="s2">"2017-02-16T21:00:00Z"</span><span class="p">,</span> 
       <span class="s2">"2017-02-17T00:00:00Z"</span>
     <span class="p">],</span> 
-    <span class="s2">"lat"</span><span class="err">:</span> <span class="o">-</span><span class="mf">33.8</span><span class="p">,</span> 
-    <span class="s2">"lon"</span><span class="err">:</span> <span class="mf">151.3</span><span class="p">,</span> 
-    <span class="s2">"site"</span><span class="err">:</span> <span class="mi">0</span><span class="p">,</span> 
-    <span class="s2">"tmp2m"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"lat"</span><span class="p">:</span> <span class="o">-</span><span class="mf">33.8</span><span class="p">,</span> 
+    <span class="s2">"lon"</span><span class="p">:</span> <span class="mf">151.3</span><span class="p">,</span> 
+    <span class="s2">"site"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
+    <span class="s2">"tmp2m"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">295.8</span><span class="p">,</span> 
       <span class="mf">296.5</span><span class="p">,</span> 
       <span class="mf">295.6</span><span class="p">,</span> 
@@ -298,7 +298,7 @@
       <span class="mf">296.8</span><span class="p">,</span> 
       <span class="mf">303.6</span>
     <span class="p">],</span> 
-    <span class="s2">"vgrd10m"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"vgrd10m"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">5.105</span><span class="p">,</span> 
       <span class="mf">6.662</span><span class="p">,</span> 
       <span class="mf">6.487</span><span class="p">,</span> 
@@ -325,7 +325,7 @@
       <span class="o">-</span><span class="mf">4.991</span><span class="p">,</span> 
       <span class="o">-</span><span class="mf">3.675</span>
     <span class="p">],</span> 
-    <span class="s2">"ugrd10m"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"ugrd10m"</span><span class="p">:</span> <span class="p">[</span>
       <span class="o">-</span><span class="mf">1.862</span><span class="p">,</span> 
       <span class="o">-</span><span class="mf">2.976</span><span class="p">,</span> 
       <span class="o">-</span><span class="mf">3.51</span><span class="p">,</span> 
@@ -352,7 +352,7 @@
       <span class="mf">0.2462</span><span class="p">,</span> 
       <span class="mf">0.4433</span>
     <span class="p">],</span> 
-    <span class="s2">"tp_sw1"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"tp_sw1"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">11.25</span><span class="p">,</span> 
       <span class="mf">8.741</span><span class="p">,</span> 
       <span class="mf">8.703</span><span class="p">,</span> 
@@ -379,7 +379,7 @@
       <span class="mf">7.307</span><span class="p">,</span> 
       <span class="mf">7.314</span>
     <span class="p">],</span> 
-    <span class="s2">"tp_sw2"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"tp_sw2"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">8.716</span><span class="p">,</span> 
       <span class="mf">8.622</span><span class="p">,</span> 
       <span class="mf">12.16</span><span class="p">,</span> 
@@ -406,7 +406,7 @@
       <span class="mf">10.59</span><span class="p">,</span> 
       <span class="mf">10.58</span>
     <span class="p">],</span> 
-    <span class="s2">"hs"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"hs"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">2.005</span><span class="p">,</span> 
       <span class="mf">2.013</span><span class="p">,</span> 
       <span class="mf">1.978</span><span class="p">,</span> 
@@ -433,7 +433,7 @@
       <span class="mf">1.45</span><span class="p">,</span> 
       <span class="mf">1.308</span>
     <span class="p">],</span> 
-    <span class="s2">"tp"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"tp"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">11.23</span><span class="p">,</span> 
       <span class="mf">11.03</span><span class="p">,</span> 
       <span class="mf">8.795</span><span class="p">,</span> 
@@ -460,7 +460,7 @@
       <span class="mf">7.151</span><span class="p">,</span> 
       <span class="mf">7.149</span>
     <span class="p">],</span> 
-    <span class="s2">"hs_sw2"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"hs_sw2"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">0.3286</span><span class="p">,</span> 
       <span class="mf">0.3208</span><span class="p">,</span> 
       <span class="mf">0.08006</span><span class="p">,</span> 
@@ -487,7 +487,7 @@
       <span class="mf">0.3774</span><span class="p">,</span> 
       <span class="mf">0.3537</span>
     <span class="p">],</span> 
-    <span class="s2">"hs_sw1"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"hs_sw1"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">1.971</span><span class="p">,</span> 
       <span class="mf">0.426</span><span class="p">,</span> 
       <span class="mf">0.3926</span><span class="p">,</span> 
@@ -514,7 +514,7 @@
       <span class="mf">1.294</span><span class="p">,</span> 
       <span class="mf">1.158</span>
     <span class="p">],</span> 
-    <span class="s2">"tp_sea"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"tp_sea"</span><span class="p">:</span> <span class="p">[</span>
       <span class="kc">null</span><span class="p">,</span> 
       <span class="mf">11.07</span><span class="p">,</span> 
       <span class="mf">8.75</span><span class="p">,</span> 
@@ -541,7 +541,7 @@
       <span class="mf">6.972</span><span class="p">,</span> 
       <span class="mf">6.744</span>
     <span class="p">],</span> 
-    <span class="s2">"dpm_sw1"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"dpm_sw1"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">184.5</span><span class="p">,</span> 
       <span class="mf">81.77</span><span class="p">,</span> 
       <span class="mf">82.63</span><span class="p">,</span> 
@@ -568,7 +568,7 @@
       <span class="mf">60.43</span><span class="p">,</span> 
       <span class="mf">61.37</span>
     <span class="p">],</span> 
-    <span class="s2">"dpm"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"dpm"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">187.4</span><span class="p">,</span> 
       <span class="mf">186.5</span><span class="p">,</span> 
       <span class="mf">182.6</span><span class="p">,</span> 
@@ -595,7 +595,7 @@
       <span class="mf">51.48</span><span class="p">,</span> 
       <span class="mf">49.64</span>
     <span class="p">],</span> 
-    <span class="s2">"dpm_sw2"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"dpm_sw2"</span><span class="p">:</span> <span class="p">[</span>
       <span class="mf">78.83</span><span class="p">,</span> 
       <span class="mf">76.6</span><span class="p">,</span> 
       <span class="mi">76</span><span class="p">,</span> 
@@ -622,7 +622,7 @@
       <span class="mf">179.8</span><span class="p">,</span> 
       <span class="mf">180.1</span>
     <span class="p">],</span> 
-    <span class="s2">"hs_sea"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"hs_sea"</span><span class="p">:</span> <span class="p">[</span>
       <span class="kc">null</span><span class="p">,</span> 
       <span class="mf">1.956</span><span class="p">,</span> 
       <span class="mf">1.926</span><span class="p">,</span> 
@@ -649,7 +649,7 @@
       <span class="mf">2.283</span><span class="p">,</span> 
       <span class="mf">2.011</span>
     <span class="p">],</span> 
-    <span class="s2">"dpm_sea"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"dpm_sea"</span><span class="p">:</span> <span class="p">[</span>
       <span class="kc">null</span><span class="p">,</span> 
       <span class="mi">183</span><span class="p">,</span> 
       <span class="mi">181</span><span class="p">,</span> 
@@ -678,7 +678,6 @@
     <span class="p">]</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
 </div>
 
   </section>

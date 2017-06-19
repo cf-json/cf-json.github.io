@@ -10,5 +10,5 @@ github_username: cf-json
 
 # Build settings
 markdown: kramdown
-  input: GFM
-  syntax_highlighter: rouge
+
+highlighter: rouge
