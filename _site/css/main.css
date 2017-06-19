@@ -301,5 +301,5 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #222; }
 
-#example div {
+#example pre {
   margin: 5px; }

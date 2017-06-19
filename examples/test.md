@@ -4,7 +4,7 @@ layout: examples
 
 An example of timeseries at a site
 
-``` javascript
+``` JSON
 {
   "dimensions": {
     "time": 25

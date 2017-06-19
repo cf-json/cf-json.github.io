@@ -6,28 +6,37 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CF-json examples">
-    <meta name="author" content="MetOcean Solutions">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <title>CF-JSON example</title>
+    <title>CF-json</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="../css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
-   
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
+
 <body id="page-top">
+  
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,624 +72,638 @@
   <section class="bg-primary" id="example">
     <p>An example of timeseries at a site</p>
 
-<div class="language-javascript highlighter-rouge"><span class="p">{</span>
-  <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"time"</span><span class="p">:</span> <span class="mi">25</span>
-  <span class="p">},</span> 
-  <span class="s2">"global_attributes"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"institution"</span><span class="p">:</span> <span class="s2">"MSL"</span><span class="p">,</span>  
-    <span class="s2">"history"</span><span class="p">:</span> <span class="s2">"2017-02-14 00:48:36 UTC : UDS Query: datum=msl&amp;xy=151.3,-33.8&amp;slfmt=bln&amp;fmt=nc&amp;var=hs,dpm,tp,hs_sw1,tp_sw1,dpm_sw1,hs_sw2,tp_sw2,dpm_sw2,hs_sea,tp_sea,dpm_sea,ugrd10m,vgrd10m,tmp2m&amp;type=fc,stat,tide,hc,rt&amp;bnd=151.300000,151.300000,-33.800000,-33.800000&amp;sort=quality,-res&amp;spinup=0.0&amp;stepback=1&amp;dset=gfs,mrf,ww3_gfs_glob-st4_lr&amp;dt=3&amp;dim=1,1&amp;time=20170214.000000,20170217.000000"</span>
-  <span class="p">},</span> 
-  <span class="s2">"variables"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"time"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"ISO8601 timestamps"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"lat"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{}</span>
-    <span class="p">},</span> 
-    <span class="s2">"lon"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{}</span>
-    <span class="p">},</span> 
-    <span class="s2">"site"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{}</span>
-    <span class="p">},</span> 
-    <span class="s2">"tmp2m"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"2 m above ground Temp. [K]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"K"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"vgrd10m"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"10 m above ground v wind [m/s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m/s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"ugrd10m"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"10 m above ground u wind [m/s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m/s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"tp_sw1"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface swell period [s] "</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"tp_sw2"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface secondary swell period [s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"hs"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface sig height of wind waves and swell [m]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"tp"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface peak wave period [s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"hs_sw2"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface secondary swell height [m]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"hs_sw1"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface swell height [m] "</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"tp_sea"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface mean period of wind waves [s]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"s"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"dpm_sw1"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface swell direction [deg]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"dpm"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface primary wave direction [deg]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"dpm_sw2"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface secondary swell direction [deg] "</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"hs_sea"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface wave height wind waves [m]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"m"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">},</span> 
-    <span class="s2">"dpm_sea"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"long_name"</span><span class="p">:</span> <span class="s2">"surface direction of wind waves [deg]"</span><span class="p">,</span> 
-        <span class="s2">"units"</span><span class="p">:</span> <span class="s2">"deg"</span><span class="p">,</span> 
-        <span class="s2">"vpair"</span><span class="p">:</span> <span class="s2">"None"</span>
-      <span class="p">},</span> 
-      <span class="s2">"dimensions"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">"time"</span>
-      <span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">},</span> 
-  <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"time"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">"2017-02-14T00:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-14T03:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-14T06:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-14T09:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-14T12:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-14T15:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-14T18:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-14T21:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T00:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T03:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T06:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T09:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T12:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T15:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T18:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-15T21:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T00:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T03:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T06:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T09:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T12:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T15:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T18:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-16T21:00:00Z"</span><span class="p">,</span> 
-      <span class="s2">"2017-02-17T00:00:00Z"</span>
-    <span class="p">],</span> 
-    <span class="s2">"lat"</span><span class="p">:</span> <span class="o">-</span><span class="mf">33.8</span><span class="p">,</span> 
-    <span class="s2">"lon"</span><span class="p">:</span> <span class="mf">151.3</span><span class="p">,</span> 
-    <span class="s2">"site"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
-    <span class="s2">"tmp2m"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">295.8</span><span class="p">,</span> 
-      <span class="mf">296.5</span><span class="p">,</span> 
-      <span class="mf">295.6</span><span class="p">,</span> 
-      <span class="mi">295</span><span class="p">,</span> 
-      <span class="mi">295</span><span class="p">,</span> 
-      <span class="mf">294.5</span><span class="p">,</span> 
-      <span class="mi">294</span><span class="p">,</span> 
-      <span class="mf">293.7</span><span class="p">,</span> 
-      <span class="mf">298.1</span><span class="p">,</span> 
-      <span class="mf">298.5</span><span class="p">,</span> 
-      <span class="mf">297.8</span><span class="p">,</span> 
-      <span class="mf">296.3</span><span class="p">,</span> 
-      <span class="mf">296.6</span><span class="p">,</span> 
-      <span class="mf">295.7</span><span class="p">,</span> 
-      <span class="mi">295</span><span class="p">,</span> 
-      <span class="mf">295.3</span><span class="p">,</span> 
-      <span class="mf">300.6</span><span class="p">,</span> 
-      <span class="mf">303.4</span><span class="p">,</span> 
-      <span class="mf">301.7</span><span class="p">,</span> 
-      <span class="mf">299.9</span><span class="p">,</span> 
-      <span class="mf">299.4</span><span class="p">,</span> 
-      <span class="mf">298.1</span><span class="p">,</span> 
-      <span class="mi">297</span><span class="p">,</span> 
-      <span class="mf">296.8</span><span class="p">,</span> 
-      <span class="mf">303.6</span>
-    <span class="p">],</span> 
-    <span class="s2">"vgrd10m"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">5.105</span><span class="p">,</span> 
-      <span class="mf">6.662</span><span class="p">,</span> 
-      <span class="mf">6.487</span><span class="p">,</span> 
-      <span class="mf">4.876</span><span class="p">,</span> 
-      <span class="mf">4.071</span><span class="p">,</span> 
-      <span class="mf">3.502</span><span class="p">,</span> 
-      <span class="mf">2.886</span><span class="p">,</span> 
-      <span class="mf">2.604</span><span class="p">,</span> 
-      <span class="mf">1.431</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">0.8659</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.145</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">5.326</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">6.307</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">4.969</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">4.024</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.16</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.451</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.517</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">5.524</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">7.52</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">8.093</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">6.597</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">5.471</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">4.991</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.675</span>
-    <span class="p">],</span> 
-    <span class="s2">"ugrd10m"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="o">-</span><span class="mf">1.862</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">2.976</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.51</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.014</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">1.594</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">0.1217</span><span class="p">,</span> 
-      <span class="mf">1.693</span><span class="p">,</span> 
-      <span class="mf">1.762</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">0.3903</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.029</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">5.305</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">4.868</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">2.459</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">0.3181</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">0.1498</span><span class="p">,</span> 
-      <span class="mf">0.8192</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">0.6654</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">4.982</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">6.307</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">4.802</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">3.494</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">1.161</span><span class="p">,</span> 
-      <span class="o">-</span><span class="mf">0.5258</span><span class="p">,</span> 
-      <span class="mf">0.2462</span><span class="p">,</span> 
-      <span class="mf">0.4433</span>
-    <span class="p">],</span> 
-    <span class="s2">"tp_sw1"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">11.25</span><span class="p">,</span> 
-      <span class="mf">8.741</span><span class="p">,</span> 
-      <span class="mf">8.703</span><span class="p">,</span> 
-      <span class="mf">8.566</span><span class="p">,</span> 
-      <span class="mf">8.407</span><span class="p">,</span> 
-      <span class="mf">8.287</span><span class="p">,</span> 
-      <span class="mf">8.221</span><span class="p">,</span> 
-      <span class="mf">8.196</span><span class="p">,</span> 
-      <span class="mf">8.182</span><span class="p">,</span> 
-      <span class="mf">8.15</span><span class="p">,</span> 
-      <span class="mf">8.137</span><span class="p">,</span> 
-      <span class="mf">8.127</span><span class="p">,</span> 
-      <span class="mf">8.15</span><span class="p">,</span> 
-      <span class="mf">8.375</span><span class="p">,</span> 
-      <span class="mf">8.597</span><span class="p">,</span> 
-      <span class="mf">10.24</span><span class="p">,</span> 
-      <span class="mf">10.5</span><span class="p">,</span> 
-      <span class="mf">10.64</span><span class="p">,</span> 
-      <span class="mf">10.61</span><span class="p">,</span> 
-      <span class="mf">10.57</span><span class="p">,</span> 
-      <span class="mf">10.54</span><span class="p">,</span> 
-      <span class="mf">10.49</span><span class="p">,</span> 
-      <span class="mf">7.139</span><span class="p">,</span> 
-      <span class="mf">7.307</span><span class="p">,</span> 
-      <span class="mf">7.314</span>
-    <span class="p">],</span> 
-    <span class="s2">"tp_sw2"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">8.716</span><span class="p">,</span> 
-      <span class="mf">8.622</span><span class="p">,</span> 
-      <span class="mf">12.16</span><span class="p">,</span> 
-      <span class="mf">8.607</span><span class="p">,</span> 
-      <span class="mf">8.587</span><span class="p">,</span> 
-      <span class="mf">8.791</span><span class="p">,</span> 
-      <span class="mf">8.772</span><span class="p">,</span> 
-      <span class="mf">8.763</span><span class="p">,</span> 
-      <span class="mf">8.743</span><span class="p">,</span> 
-      <span class="mf">8.752</span><span class="p">,</span> 
-      <span class="mf">8.683</span><span class="p">,</span> 
-      <span class="mf">8.705</span><span class="p">,</span> 
-      <span class="mf">8.695</span><span class="p">,</span> 
-      <span class="mf">13.57</span><span class="p">,</span> 
-      <span class="mf">4.709</span><span class="p">,</span> 
-      <span class="mf">5.358</span><span class="p">,</span> 
-      <span class="mf">5.477</span><span class="p">,</span> 
-      <span class="mf">8.902</span><span class="p">,</span> 
-      <span class="mf">10.18</span><span class="p">,</span> 
-      <span class="mf">10.17</span><span class="p">,</span> 
-      <span class="mf">10.6</span><span class="p">,</span> 
-      <span class="mf">16.81</span><span class="p">,</span> 
-      <span class="mf">10.7</span><span class="p">,</span> 
-      <span class="mf">10.59</span><span class="p">,</span> 
-      <span class="mf">10.58</span>
-    <span class="p">],</span> 
-    <span class="s2">"hs"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">2.005</span><span class="p">,</span> 
-      <span class="mf">2.013</span><span class="p">,</span> 
-      <span class="mf">1.978</span><span class="p">,</span> 
-      <span class="mf">1.888</span><span class="p">,</span> 
-      <span class="mf">1.775</span><span class="p">,</span> 
-      <span class="mf">1.642</span><span class="p">,</span> 
-      <span class="mf">1.497</span><span class="p">,</span> 
-      <span class="mf">1.354</span><span class="p">,</span> 
-      <span class="mf">1.229</span><span class="p">,</span> 
-      <span class="mf">1.128</span><span class="p">,</span> 
-      <span class="mf">1.053</span><span class="p">,</span> 
-      <span class="mf">1.097</span><span class="p">,</span> 
-      <span class="mf">1.092</span><span class="p">,</span> 
-      <span class="mf">1.045</span><span class="p">,</span> 
-      <span class="mf">1.005</span><span class="p">,</span> 
-      <span class="mf">0.9766</span><span class="p">,</span> 
-      <span class="mf">0.9575</span><span class="p">,</span> 
-      <span class="mf">0.9688</span><span class="p">,</span> 
-      <span class="mf">1.176</span><span class="p">,</span> 
-      <span class="mf">1.468</span><span class="p">,</span> 
-      <span class="mf">1.631</span><span class="p">,</span> 
-      <span class="mf">1.63</span><span class="p">,</span> 
-      <span class="mf">1.555</span><span class="p">,</span> 
-      <span class="mf">1.45</span><span class="p">,</span> 
-      <span class="mf">1.308</span>
-    <span class="p">],</span> 
-    <span class="s2">"tp"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">11.23</span><span class="p">,</span> 
-      <span class="mf">11.03</span><span class="p">,</span> 
-      <span class="mf">8.795</span><span class="p">,</span> 
-      <span class="mf">8.581</span><span class="p">,</span> 
-      <span class="mf">8.433</span><span class="p">,</span> 
-      <span class="mf">8.323</span><span class="p">,</span> 
-      <span class="mf">8.267</span><span class="p">,</span> 
-      <span class="mf">8.243</span><span class="p">,</span> 
-      <span class="mf">8.229</span><span class="p">,</span> 
-      <span class="mf">8.207</span><span class="p">,</span> 
-      <span class="mf">8.195</span><span class="p">,</span> 
-      <span class="mf">8.196</span><span class="p">,</span> 
-      <span class="mf">8.227</span><span class="p">,</span> 
-      <span class="mf">8.103</span><span class="p">,</span> 
-      <span class="mf">8.282</span><span class="p">,</span> 
-      <span class="mf">9.949</span><span class="p">,</span> 
-      <span class="mf">10.24</span><span class="p">,</span> 
-      <span class="mf">10.33</span><span class="p">,</span> 
-      <span class="mf">10.28</span><span class="p">,</span> 
-      <span class="mf">5.355</span><span class="p">,</span> 
-      <span class="mf">5.964</span><span class="p">,</span> 
-      <span class="mf">6.614</span><span class="p">,</span> 
-      <span class="mf">6.975</span><span class="p">,</span> 
-      <span class="mf">7.151</span><span class="p">,</span> 
-      <span class="mf">7.149</span>
-    <span class="p">],</span> 
-    <span class="s2">"hs_sw2"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">0.3286</span><span class="p">,</span> 
-      <span class="mf">0.3208</span><span class="p">,</span> 
-      <span class="mf">0.08006</span><span class="p">,</span> 
-      <span class="mf">0.2828</span><span class="p">,</span> 
-      <span class="mf">0.273</span><span class="p">,</span> 
-      <span class="mf">0.2734</span><span class="p">,</span> 
-      <span class="mf">0.2606</span><span class="p">,</span> 
-      <span class="mf">0.2583</span><span class="p">,</span> 
-      <span class="mf">0.2541</span><span class="p">,</span> 
-      <span class="mf">0.2592</span><span class="p">,</span> 
-      <span class="mf">0.2551</span><span class="p">,</span> 
-      <span class="mf">0.2555</span><span class="p">,</span> 
-      <span class="mf">0.2523</span><span class="p">,</span> 
-      <span class="mf">0.2249</span><span class="p">,</span> 
-      <span class="mf">0.5543</span><span class="p">,</span> 
-      <span class="mf">0.6041</span><span class="p">,</span> 
-      <span class="mf">0.6057</span><span class="p">,</span> 
-      <span class="mf">0.1815</span><span class="p">,</span> 
-      <span class="mf">0.179</span><span class="p">,</span> 
-      <span class="mf">0.1499</span><span class="p">,</span> 
-      <span class="mf">0.1351</span><span class="p">,</span> 
-      <span class="mf">0.08105</span><span class="p">,</span> 
-      <span class="mf">0.4169</span><span class="p">,</span> 
-      <span class="mf">0.3774</span><span class="p">,</span> 
-      <span class="mf">0.3537</span>
-    <span class="p">],</span> 
-    <span class="s2">"hs_sw1"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">1.971</span><span class="p">,</span> 
-      <span class="mf">0.426</span><span class="p">,</span> 
-      <span class="mf">0.3926</span><span class="p">,</span> 
-      <span class="mf">1.861</span><span class="p">,</span> 
-      <span class="mf">1.749</span><span class="p">,</span> 
-      <span class="mf">1.614</span><span class="p">,</span> 
-      <span class="mf">1.457</span><span class="p">,</span> 
-      <span class="mf">1.311</span><span class="p">,</span> 
-      <span class="mf">1.183</span><span class="p">,</span> 
-      <span class="mf">1.071</span><span class="p">,</span> 
-      <span class="mf">0.9909</span><span class="p">,</span> 
-      <span class="mf">0.8889</span><span class="p">,</span> 
-      <span class="mf">0.8167</span><span class="p">,</span> 
-      <span class="mf">0.7662</span><span class="p">,</span> 
-      <span class="mf">0.7179</span><span class="p">,</span> 
-      <span class="mf">0.6829</span><span class="p">,</span> 
-      <span class="mf">0.6593</span><span class="p">,</span> 
-      <span class="mf">0.6327</span><span class="p">,</span> 
-      <span class="mf">0.5981</span><span class="p">,</span> 
-      <span class="mf">0.5573</span><span class="p">,</span> 
-      <span class="mf">0.516</span><span class="p">,</span> 
-      <span class="mf">0.4633</span><span class="p">,</span> 
-      <span class="mf">1.385</span><span class="p">,</span> 
-      <span class="mf">1.294</span><span class="p">,</span> 
-      <span class="mf">1.158</span>
-    <span class="p">],</span> 
-    <span class="s2">"tp_sea"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="mf">11.07</span><span class="p">,</span> 
-      <span class="mf">8.75</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="mf">2.828</span><span class="p">,</span> 
-      <span class="mf">3.574</span><span class="p">,</span> 
-      <span class="mf">4.203</span><span class="p">,</span> 
-      <span class="mf">4.826</span><span class="p">,</span> 
-      <span class="mf">5.096</span><span class="p">,</span> 
-      <span class="mf">5.15</span><span class="p">,</span> 
-      <span class="mf">5.321</span><span class="p">,</span> 
-      <span class="mf">5.127</span><span class="p">,</span> 
-      <span class="mf">5.335</span><span class="p">,</span> 
-      <span class="mf">5.935</span><span class="p">,</span> 
-      <span class="mf">6.575</span><span class="p">,</span> 
-      <span class="mf">7.06</span><span class="p">,</span> 
-      <span class="mf">6.972</span><span class="p">,</span> 
-      <span class="mf">6.744</span>
-    <span class="p">],</span> 
-    <span class="s2">"dpm_sw1"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">184.5</span><span class="p">,</span> 
-      <span class="mf">81.77</span><span class="p">,</span> 
-      <span class="mf">82.63</span><span class="p">,</span> 
-      <span class="mf">179.6</span><span class="p">,</span> 
-      <span class="mf">178.6</span><span class="p">,</span> 
-      <span class="mf">177.6</span><span class="p">,</span> 
-      <span class="mf">176.6</span><span class="p">,</span> 
-      <span class="mf">175.6</span><span class="p">,</span> 
-      <span class="mf">174.6</span><span class="p">,</span> 
-      <span class="mf">173.5</span><span class="p">,</span> 
-      <span class="mf">171.4</span><span class="p">,</span> 
-      <span class="mf">172.2</span><span class="p">,</span> 
-      <span class="mf">172.4</span><span class="p">,</span> 
-      <span class="mf">172.6</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">178.3</span><span class="p">,</span> 
-      <span class="mf">59.47</span><span class="p">,</span> 
-      <span class="mf">60.43</span><span class="p">,</span> 
-      <span class="mf">61.37</span>
-    <span class="p">],</span> 
-    <span class="s2">"dpm"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">187.4</span><span class="p">,</span> 
-      <span class="mf">186.5</span><span class="p">,</span> 
-      <span class="mf">182.6</span><span class="p">,</span> 
-      <span class="mf">181.7</span><span class="p">,</span> 
-      <span class="mf">180.6</span><span class="p">,</span> 
-      <span class="mf">179.6</span><span class="p">,</span> 
-      <span class="mf">178.6</span><span class="p">,</span> 
-      <span class="mf">177.5</span><span class="p">,</span> 
-      <span class="mf">176.5</span><span class="p">,</span> 
-      <span class="mf">175.4</span><span class="p">,</span> 
-      <span class="mf">174.4</span><span class="p">,</span> 
-      <span class="mf">173.4</span><span class="p">,</span> 
-      <span class="mf">171.4</span><span class="p">,</span> 
-      <span class="mf">163.2</span><span class="p">,</span> 
-      <span class="mf">161.9</span><span class="p">,</span> 
-      <span class="mf">166.8</span><span class="p">,</span> 
-      <span class="mf">165.6</span><span class="p">,</span> 
-      <span class="mf">165.5</span><span class="p">,</span> 
-      <span class="mf">164.8</span><span class="p">,</span> 
-      <span class="mf">48.52</span><span class="p">,</span> 
-      <span class="mf">50.29</span><span class="p">,</span> 
-      <span class="mf">55.67</span><span class="p">,</span> 
-      <span class="mf">54.46</span><span class="p">,</span> 
-      <span class="mf">51.48</span><span class="p">,</span> 
-      <span class="mf">49.64</span>
-    <span class="p">],</span> 
-    <span class="s2">"dpm_sw2"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="mf">78.83</span><span class="p">,</span> 
-      <span class="mf">76.6</span><span class="p">,</span> 
-      <span class="mi">76</span><span class="p">,</span> 
-      <span class="mf">77.91</span><span class="p">,</span> 
-      <span class="mf">78.93</span><span class="p">,</span> 
-      <span class="mf">83.79</span><span class="p">,</span> 
-      <span class="mf">83.83</span><span class="p">,</span> 
-      <span class="mf">83.83</span><span class="p">,</span> 
-      <span class="mf">83.79</span><span class="p">,</span> 
-      <span class="mf">85.88</span><span class="p">,</span> 
-      <span class="mf">85.63</span><span class="p">,</span> 
-      <span class="mf">87.68</span><span class="p">,</span> 
-      <span class="mf">88.58</span><span class="p">,</span> 
-      <span class="mf">183.8</span><span class="p">,</span> 
-      <span class="mf">60.21</span><span class="p">,</span> 
-      <span class="mf">70.91</span><span class="p">,</span> 
-      <span class="mf">67.1</span><span class="p">,</span> 
-      <span class="mf">88.97</span><span class="p">,</span> 
-      <span class="mf">89.17</span><span class="p">,</span> 
-      <span class="mf">91.14</span><span class="p">,</span> 
-      <span class="mf">97.39</span><span class="p">,</span> 
-      <span class="mf">196.3</span><span class="p">,</span> 
-      <span class="mi">180</span><span class="p">,</span> 
-      <span class="mf">179.8</span><span class="p">,</span> 
-      <span class="mf">180.1</span>
-    <span class="p">],</span> 
-    <span class="s2">"hs_sea"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="mf">1.956</span><span class="p">,</span> 
-      <span class="mf">1.926</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="mf">0.5188</span><span class="p">,</span> 
-      <span class="mf">0.6227</span><span class="p">,</span> 
-      <span class="mf">0.6168</span><span class="p">,</span> 
-      <span class="mf">1.179</span><span class="p">,</span> 
-      <span class="mf">1.229</span><span class="p">,</span> 
-      <span class="mf">1.253</span><span class="p">,</span> 
-      <span class="mf">0.6998</span><span class="p">,</span> 
-      <span class="mf">0.9853</span><span class="p">,</span> 
-      <span class="mf">1.336</span><span class="p">,</span> 
-      <span class="mf">1.532</span><span class="p">,</span> 
-      <span class="mf">1.552</span><span class="p">,</span> 
-      <span class="mf">2.518</span><span class="p">,</span> 
-      <span class="mf">2.283</span><span class="p">,</span> 
-      <span class="mf">2.011</span>
-    <span class="p">],</span> 
-    <span class="s2">"dpm_sea"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="mi">183</span><span class="p">,</span> 
-      <span class="mi">181</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="kc">null</span><span class="p">,</span> 
-      <span class="mf">58.93</span><span class="p">,</span> 
-      <span class="mf">49.74</span><span class="p">,</span> 
-      <span class="mf">53.8</span><span class="p">,</span> 
-      <span class="mf">23.8</span><span class="p">,</span> 
-      <span class="mf">22.4</span><span class="p">,</span> 
-      <span class="mf">20.6</span><span class="p">,</span> 
-      <span class="mf">58.1</span><span class="p">,</span> 
-      <span class="mf">50.92</span><span class="p">,</span> 
-      <span class="mf">46.47</span><span class="p">,</span> 
-      <span class="mf">46.26</span><span class="p">,</span> 
-      <span class="mf">48.88</span><span class="p">,</span> 
-      <span class="mf">23.6</span><span class="p">,</span> 
-      <span class="mi">21</span><span class="p">,</span> 
-      <span class="mi">21</span>
-    <span class="p">]</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</div>
+<pre><code class="language-JSON">{
+  "dimensions": {
+    "time": 25
+  }, 
+  "global_attributes": {
+    "institution": "MSL",  
+    "history": "2017-02-14 00:48:36 UTC : UDS Query: datum=msl&amp;xy=151.3,-33.8&amp;slfmt=bln&amp;fmt=nc&amp;var=hs,dpm,tp,hs_sw1,tp_sw1,dpm_sw1,hs_sw2,tp_sw2,dpm_sw2,hs_sea,tp_sea,dpm_sea,ugrd10m,vgrd10m,tmp2m&amp;type=fc,stat,tide,hc,rt&amp;bnd=151.300000,151.300000,-33.800000,-33.800000&amp;sort=quality,-res&amp;spinup=0.0&amp;stepback=1&amp;dset=gfs,mrf,ww3_gfs_glob-st4_lr&amp;dt=3&amp;dim=1,1&amp;time=20170214.000000,20170217.000000"
+  }, 
+  "variables": {
+    "time": {
+      "attributes": {
+        "units": "ISO8601 timestamps"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "lat": {
+      "attributes": {}
+    }, 
+    "lon": {
+      "attributes": {}
+    }, 
+    "site": {
+      "attributes": {}
+    }, 
+    "tmp2m": {
+      "attributes": {
+        "long_name": "2 m above ground Temp. [K]", 
+        "units": "K", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "vgrd10m": {
+      "attributes": {
+        "long_name": "10 m above ground v wind [m/s]", 
+        "units": "m/s", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "ugrd10m": {
+      "attributes": {
+        "long_name": "10 m above ground u wind [m/s]", 
+        "units": "m/s", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "tp_sw1": {
+      "attributes": {
+        "long_name": "surface swell period [s] ", 
+        "units": "s", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "tp_sw2": {
+      "attributes": {
+        "long_name": "surface secondary swell period [s]", 
+        "units": "s", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "hs": {
+      "attributes": {
+        "long_name": "surface sig height of wind waves and swell [m]", 
+        "units": "m", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "tp": {
+      "attributes": {
+        "long_name": "surface peak wave period [s]", 
+        "units": "s", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "hs_sw2": {
+      "attributes": {
+        "long_name": "surface secondary swell height [m]", 
+        "units": "m", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "hs_sw1": {
+      "attributes": {
+        "long_name": "surface swell height [m] ", 
+        "units": "m", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "tp_sea": {
+      "attributes": {
+        "long_name": "surface mean period of wind waves [s]", 
+        "units": "s", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "dpm_sw1": {
+      "attributes": {
+        "long_name": "surface swell direction [deg]", 
+        "units": "deg", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "dpm": {
+      "attributes": {
+        "long_name": "surface primary wave direction [deg]", 
+        "units": "deg", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "dpm_sw2": {
+      "attributes": {
+        "long_name": "surface secondary swell direction [deg] ", 
+        "units": "deg", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "hs_sea": {
+      "attributes": {
+        "long_name": "surface wave height wind waves [m]", 
+        "units": "m", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }, 
+    "dpm_sea": {
+      "attributes": {
+        "long_name": "surface direction of wind waves [deg]", 
+        "units": "deg", 
+        "vpair": "None"
+      }, 
+      "dimensions": [
+        "time"
+      ]
+    }
+  }, 
+  "data": {
+    "time": [
+      "2017-02-14T00:00:00Z", 
+      "2017-02-14T03:00:00Z", 
+      "2017-02-14T06:00:00Z", 
+      "2017-02-14T09:00:00Z", 
+      "2017-02-14T12:00:00Z", 
+      "2017-02-14T15:00:00Z", 
+      "2017-02-14T18:00:00Z", 
+      "2017-02-14T21:00:00Z", 
+      "2017-02-15T00:00:00Z", 
+      "2017-02-15T03:00:00Z", 
+      "2017-02-15T06:00:00Z", 
+      "2017-02-15T09:00:00Z", 
+      "2017-02-15T12:00:00Z", 
+      "2017-02-15T15:00:00Z", 
+      "2017-02-15T18:00:00Z", 
+      "2017-02-15T21:00:00Z", 
+      "2017-02-16T00:00:00Z", 
+      "2017-02-16T03:00:00Z", 
+      "2017-02-16T06:00:00Z", 
+      "2017-02-16T09:00:00Z", 
+      "2017-02-16T12:00:00Z", 
+      "2017-02-16T15:00:00Z", 
+      "2017-02-16T18:00:00Z", 
+      "2017-02-16T21:00:00Z", 
+      "2017-02-17T00:00:00Z"
+    ], 
+    "lat": -33.8, 
+    "lon": 151.3, 
+    "site": 0, 
+    "tmp2m": [
+      295.8, 
+      296.5, 
+      295.6, 
+      295, 
+      295, 
+      294.5, 
+      294, 
+      293.7, 
+      298.1, 
+      298.5, 
+      297.8, 
+      296.3, 
+      296.6, 
+      295.7, 
+      295, 
+      295.3, 
+      300.6, 
+      303.4, 
+      301.7, 
+      299.9, 
+      299.4, 
+      298.1, 
+      297, 
+      296.8, 
+      303.6
+    ], 
+    "vgrd10m": [
+      5.105, 
+      6.662, 
+      6.487, 
+      4.876, 
+      4.071, 
+      3.502, 
+      2.886, 
+      2.604, 
+      1.431, 
+      -0.8659, 
+      -3.145, 
+      -5.326, 
+      -6.307, 
+      -4.969, 
+      -4.024, 
+      -3.16, 
+      -3.451, 
+      -3.517, 
+      -5.524, 
+      -7.52, 
+      -8.093, 
+      -6.597, 
+      -5.471, 
+      -4.991, 
+      -3.675
+    ], 
+    "ugrd10m": [
+      -1.862, 
+      -2.976, 
+      -3.51, 
+      -3.014, 
+      -1.594, 
+      -0.1217, 
+      1.693, 
+      1.762, 
+      -0.3903, 
+      -3.029, 
+      -5.305, 
+      -4.868, 
+      -2.459, 
+      -0.3181, 
+      -0.1498, 
+      0.8192, 
+      -0.6654, 
+      -4.982, 
+      -6.307, 
+      -4.802, 
+      -3.494, 
+      -1.161, 
+      -0.5258, 
+      0.2462, 
+      0.4433
+    ], 
+    "tp_sw1": [
+      11.25, 
+      8.741, 
+      8.703, 
+      8.566, 
+      8.407, 
+      8.287, 
+      8.221, 
+      8.196, 
+      8.182, 
+      8.15, 
+      8.137, 
+      8.127, 
+      8.15, 
+      8.375, 
+      8.597, 
+      10.24, 
+      10.5, 
+      10.64, 
+      10.61, 
+      10.57, 
+      10.54, 
+      10.49, 
+      7.139, 
+      7.307, 
+      7.314
+    ], 
+    "tp_sw2": [
+      8.716, 
+      8.622, 
+      12.16, 
+      8.607, 
+      8.587, 
+      8.791, 
+      8.772, 
+      8.763, 
+      8.743, 
+      8.752, 
+      8.683, 
+      8.705, 
+      8.695, 
+      13.57, 
+      4.709, 
+      5.358, 
+      5.477, 
+      8.902, 
+      10.18, 
+      10.17, 
+      10.6, 
+      16.81, 
+      10.7, 
+      10.59, 
+      10.58
+    ], 
+    "hs": [
+      2.005, 
+      2.013, 
+      1.978, 
+      1.888, 
+      1.775, 
+      1.642, 
+      1.497, 
+      1.354, 
+      1.229, 
+      1.128, 
+      1.053, 
+      1.097, 
+      1.092, 
+      1.045, 
+      1.005, 
+      0.9766, 
+      0.9575, 
+      0.9688, 
+      1.176, 
+      1.468, 
+      1.631, 
+      1.63, 
+      1.555, 
+      1.45, 
+      1.308
+    ], 
+    "tp": [
+      11.23, 
+      11.03, 
+      8.795, 
+      8.581, 
+      8.433, 
+      8.323, 
+      8.267, 
+      8.243, 
+      8.229, 
+      8.207, 
+      8.195, 
+      8.196, 
+      8.227, 
+      8.103, 
+      8.282, 
+      9.949, 
+      10.24, 
+      10.33, 
+      10.28, 
+      5.355, 
+      5.964, 
+      6.614, 
+      6.975, 
+      7.151, 
+      7.149
+    ], 
+    "hs_sw2": [
+      0.3286, 
+      0.3208, 
+      0.08006, 
+      0.2828, 
+      0.273, 
+      0.2734, 
+      0.2606, 
+      0.2583, 
+      0.2541, 
+      0.2592, 
+      0.2551, 
+      0.2555, 
+      0.2523, 
+      0.2249, 
+      0.5543, 
+      0.6041, 
+      0.6057, 
+      0.1815, 
+      0.179, 
+      0.1499, 
+      0.1351, 
+      0.08105, 
+      0.4169, 
+      0.3774, 
+      0.3537
+    ], 
+    "hs_sw1": [
+      1.971, 
+      0.426, 
+      0.3926, 
+      1.861, 
+      1.749, 
+      1.614, 
+      1.457, 
+      1.311, 
+      1.183, 
+      1.071, 
+      0.9909, 
+      0.8889, 
+      0.8167, 
+      0.7662, 
+      0.7179, 
+      0.6829, 
+      0.6593, 
+      0.6327, 
+      0.5981, 
+      0.5573, 
+      0.516, 
+      0.4633, 
+      1.385, 
+      1.294, 
+      1.158
+    ], 
+    "tp_sea": [
+      null, 
+      11.07, 
+      8.75, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      2.828, 
+      3.574, 
+      4.203, 
+      4.826, 
+      5.096, 
+      5.15, 
+      5.321, 
+      5.127, 
+      5.335, 
+      5.935, 
+      6.575, 
+      7.06, 
+      6.972, 
+      6.744
+    ], 
+    "dpm_sw1": [
+      184.5, 
+      81.77, 
+      82.63, 
+      179.6, 
+      178.6, 
+      177.6, 
+      176.6, 
+      175.6, 
+      174.6, 
+      173.5, 
+      171.4, 
+      172.2, 
+      172.4, 
+      172.6, 
+      178.3, 
+      178.3, 
+      178.3, 
+      178.3, 
+      178.3, 
+      178.3, 
+      178.3, 
+      178.3, 
+      59.47, 
+      60.43, 
+      61.37
+    ], 
+    "dpm": [
+      187.4, 
+      186.5, 
+      182.6, 
+      181.7, 
+      180.6, 
+      179.6, 
+      178.6, 
+      177.5, 
+      176.5, 
+      175.4, 
+      174.4, 
+      173.4, 
+      171.4, 
+      163.2, 
+      161.9, 
+      166.8, 
+      165.6, 
+      165.5, 
+      164.8, 
+      48.52, 
+      50.29, 
+      55.67, 
+      54.46, 
+      51.48, 
+      49.64
+    ], 
+    "dpm_sw2": [
+      78.83, 
+      76.6, 
+      76, 
+      77.91, 
+      78.93, 
+      83.79, 
+      83.83, 
+      83.83, 
+      83.79, 
+      85.88, 
+      85.63, 
+      87.68, 
+      88.58, 
+      183.8, 
+      60.21, 
+      70.91, 
+      67.1, 
+      88.97, 
+      89.17, 
+      91.14, 
+      97.39, 
+      196.3, 
+      180, 
+      179.8, 
+      180.1
+    ], 
+    "hs_sea": [
+      null, 
+      1.956, 
+      1.926, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      0.5188, 
+      0.6227, 
+      0.6168, 
+      1.179, 
+      1.229, 
+      1.253, 
+      0.6998, 
+      0.9853, 
+      1.336, 
+      1.532, 
+      1.552, 
+      2.518, 
+      2.283, 
+      2.011
+    ], 
+    "dpm_sea": [
+      null, 
+      183, 
+      181, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      null, 
+      58.93, 
+      49.74, 
+      53.8, 
+      23.8, 
+      22.4, 
+      20.6, 
+      58.1, 
+      50.92, 
+      46.47, 
+      46.26, 
+      48.88, 
+      23.6, 
+      21, 
+      21
+    ]
+  }
+}
+</code></pre>
 
   </section>
+  <!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/creative.js"></script>
+
 </body>
 
 </html>
