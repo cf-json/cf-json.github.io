@@ -20,7 +20,7 @@ hr.light {
 
 a {
     @include transition-all;
-    color: $theme-primary;
+    color: white;
     &:hover,
     &:focus {
         color: darken($theme-primary, 10%);
@@ -349,3 +349,6 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+#example div {
+    margin: 5px;
+}
