@@ -2,6 +2,7 @@
 layout: specs
 ---
 # CF-JSON specification
+Version 0.1
 
 ## 1. Introduction
 
