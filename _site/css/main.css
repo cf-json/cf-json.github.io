@@ -22,6 +22,14 @@ a {
   a:hover, a:focus {
     color: #003045; }
 
+#specification a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #005478; }
+  #specification a:hover, #specification a:focus {
+    color: #003045; }
+
 h1,
 h2,
 h3,

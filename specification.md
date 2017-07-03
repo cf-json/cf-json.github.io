@@ -1,7 +1,199 @@
 ---
 layout: specs
 ---
-
 # CF-JSON specification
 
-Will be here
+## 1. Introduction
+
+### 1.1 Purpose
+CF-JSON is a JSON format primarily intended for encoding climate and weather data. The format supports data defined on arbitrary spatial domains such as grids, at points or along tracks. The format is self describing, meaning that all necessary spatial and temporal coordinate data is carried within the overall data object itself.
+
+### 1.2 Relationship with CF-conventions
+CF-JSON is an application of [NetCDF CF-conventions](http://cfconventions.org) to the JSON format. It uses all of the fundamental data structures and components of CF-NetCDF. As JSON does not support all of the NetCDF datatypes, there is not a one-to-one CF-JSON should be capable of expressing 
+
+### 1.3 Definitions
+The terms JSON, object, member, name, value, array number, true, false and null all correspond to the terms definied in [RFC7159](https://tools.ietf.org/html/rfc7159).
+The terminology defined in Section 1.2 of the NetCDF CF-conventions document is also used here for specific components of data structures or spatial entities.
+
+
+## 2. CF-JSON object
+A CF-JSON object represents a set of data referenced in space and (optionally) time. Data is specified as `variables` on defined `dimensions`. Global or variable `attributes` can be attached to the overall CF-JSON object or to individual `variables`. A CF-JSON object MUST contain `attributes`, `dimensions`, `variables` and `data` objects.
+
+Example CF-JSON object for some wind data data arranged on a grid:
+
+``` Javascript
+{
+    "attributes": {
+        "source": "cfjson.org",
+        "description": "Example wind data on a grid",
+        "timestamp": "2000-01-01T00:00:00Z"
+    },
+    "dimensions": {
+        "latitude": 8,
+        "longitude": 10
+    },
+    "variables": {
+        "longitude": {
+            "dimensions": ["longitude"],
+            "attributes": {
+                "units": "degress_east"
+            }
+        },
+        "latitude": {
+            "dimensions": ["latitude"],
+            "attributes": {
+                "units": "degress_north"
+            }
+        },
+        "wind_east": {
+            "dimensions": ["latitude", "longitude"],
+            "attributes": {
+                "units": "ms^{-1}",
+                "long_name": "Easterly component of wind",
+                "standard_name": "eastward_wind"
+            }
+        },
+        "wind_north": {
+            "dimensions": ["latitude", "longitude"],
+            "attributes": {
+                "units": "ms^{-1}",
+                "long_name": "Northerly component of wind",
+                "standard_name": "northward_wind"
+            }
+        }
+    },
+    "data": {
+        "longitude": [ 0.2,  0.4,  0.6,  0.8,  1.0,  1.2,  1.4,  1.6,  1.8],
+        "latitude": [ 30.2,  30.4,  30.6,  30.8,  31.0,  31.2,  31.4,  31.6,  31.8,  32.0],
+        "wind_east": [
+        [ 5.3,  2.2,  2.2,  5.2,  1.6,  5.2,  6.7,  9.9,  8.4,  1.5],
+        [ 7.1,  1.9,  7.8,  6.8,  1.7,  2.3,  6.8,  2.6,  3.5,  4.5],
+        [ 1.5,  4.4,  5.9,  0.3,  7.6,  1.0,  6.6,  0.8,  2.8,  3.0],
+        [ 4.3,  4.0,  5.3,  1.1,  0.6,  7.9,  8.3,  9.0,  6.9,  3.5],
+        [ 5.1,  6.6,  4.5,  4.8,  2.7,  7.3,  9.3,  1.2,  4.2,  1.9],
+        [ 9.3,  9.1,  5.5,  5.2,  2.5,  0.1,  6.4,  9.5,  5.6,  5.9],
+        [ 0.1,  5.2,  0.8,  8.4,  3.8,  3.1,  8.7,  0.7,  1.0,  2.8],
+        [ 7.5,  2.7,  5.9,  6.8,  4.2,  9.1,  9.8,  4.7,  1.8,  6.9]
+        ],
+        "wind_north": [
+        [ 8.9,  2.1,  9.0,  6.0,  9.2,  8.6,  7.3,  7.2,  5.6,  6.0],
+        [ 8.4,  9.1,  0.2,  9.2,  6.4,  9.4,  6.3,  4.1,  1.3,  3.7],
+        [ 4.3,  5.3,  2.3,  8.5,  9.1,  9.8,  7.4,  2.5,  9.0,  0.9],
+        [ 8.1,  5.8,  2.7,  2.9,  7.6,  5.5,  4.8,  5.0,  3.9,  9.6],
+        [ 5.9,  7.2,  3.5,  4.7,  8.4,  9.3,  0.9,  9.6,  5.5,  5.8],
+        [ 7.9,  6.1,  2.2,  9.6,  9.8,  7.5,  0.1,  6.6,  0.0,  2.7],
+        [ 7.0,  6.0,  6.5,  1.1,  8.0,  9.0,  9.7,  1.6,  5.0,  6.6],
+        [ 6.0,  4.4,  5.0,  8.6,  5.6,  3.5,  1.9,  2.3,  7.2,  3.1]
+        ]
+    }
+}
+```
+
+### 2.1 Attributes
+The attributes object contains arbitrary global attributes as its key:value members. These attributes can express any relevant information about the overall dataset. The attributes object can contain further nested objects.
+
+### 2.2 Dimensions
+The dimensions object has dimension id:size as its key:value members. All dimensions MUST be declared in the dimensions object, if they are used in any variables. Not all dimensions need to be used in any given variable. The dimensions length with correspond to the size of the data array in that dimension.
+
+### 2.3 Variables
+The variables definition object has variable id:object as its key:value members. Each variable object MUST include `dimensions` and `attributes` fields. The dimensions field is an array of dimension IDs which correspond to the array ordering of the variable data. It is recommended but not mandatory to use [COARDS convention](http://ferret.pmel.noaa.gov/Ferret/documentation/coards-netcdf-conventions) dimension ordering for spatial and temporal dimensions which TZYX. A variable can have no dimensions if it has only a single numeric or string value, in which case the dimensions should be specified as `null`.
+
+It is recommended but not mandatory to include the [CF-conventions standard name](http://cfconventions.org/Data/cf-standard-names/27/build/cf-standard-name-table.html) as a variable attribute. It is recommended to include the variable units in the attributes, with Latex formatting the preferred means to indicate exponents. 
+
+### 2.4 Data
+The data object contains the actual data for each variable as its key:value members. Each data key MUST be the same as it variable ID key. The data value itself must be a single value (for no dimensions) or array with the same number of dimensions as the variable definition and with the same array ordering as the variable dimensions.
+
+Example:
+```Javascript
+{
+    ...
+    "variables": {
+        "tmp2m": {
+            "dimensions": ["time","latitude","longitude"]
+        }
+    ...
+    "data": {
+        "tmp2m": [
+            [[1.2,3.4,5.6 ...],
+             [2.3,6.5,8.7 ...],
+             ...
+            ],
+        ]
+    ...
+}
+```
+The value at `object["data"]["tmp2m"][k,j,i]` is at `time[k]`, `latitude[j]` and `longitude[i]`.
+
+#### Data precision
+The number of significant figures used to express numeric data values should be sensible for data efficiency and readability. However the decimal precision of the data does not imply its underlying accuracy or precision.
+
+#### Time
+Time data should be expressed as numeric values relative to a start time as in CF-conventions or as [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) strings.
+
+Example:
+```Javascript
+{
+    ...   
+    "variables": {
+        "time": {
+            "dimensions": ["time"],
+            "attributes": {
+                "units": "days since 2000-01-01"
+            }
+        }
+    },
+    "data": {
+        "time": [0, 1, 2]
+    }
+}
+```
+is the same as:
+```Javascript
+{
+    ...
+    "variables": {
+        "time": {
+            "dimensions": ["time"],
+            "attributes": {
+                "units": "ISO8601 datetimes"
+            }
+        }
+    },
+    "data": {
+        "time": [
+            "2000-01-01T00:00:00Z",
+            "2000-01-02T00:00:00Z",
+            "2000-01-03T00:00:00Z"
+        ]
+    }
+}
+```
+
+## Recommendations
+
+### Squashing singleton dimensions
+It is recommended by not required to squash any singleton dimensions and to remove those from the variable definition.
+
+### Missing values
+Missing values can be defined with specific numeric or string values rather than using `null`. A `missing_value` attribute should be defined for the variable. 
+
+Example:
+``` Javascript
+{
+    ...
+    "variables": {
+        "tmp2m": {
+            "dimensions": ["time","latitude","longitude"],
+            "missing_value": -9999
+        }
+    ...
+    "data": {
+        "tmp2m": [
+            [[1.2,3.4,-9999 ...],
+             [2.3,-9999,8.7 ...],
+             ...
+            ],
+        ]
+    ...
+}
+```
