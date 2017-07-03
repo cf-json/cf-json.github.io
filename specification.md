@@ -125,6 +125,32 @@ Example:
 ```
 The value at `object["data"]["tmp2m"][k,j,i]` is at `time[k]`, `latitude[j]` and `longitude[i]`.
 
+#### Missing data
+Missing data can either be expressed as `null` or given a specific `missing_value` numeric or string value which is defined in the attributes. `NaN` should NOT be used as it is not JSON compliant.
+
+Example:
+``` Javascript
+{
+    ...
+    "variables": {
+        "tmp2m": {
+            "dimensions": ["time","latitude","longitude"],
+            "missing_value": -9999
+        }
+    ...
+    "data": {
+        "tmp2m": [
+            [[1.2,3.4,-9999 ...],
+             [2.3,-9999,8.7 ...],
+             ...
+            ],
+        ]
+    ...
+}
+```
+
+
+
 #### Data precision
 The number of significant figures used to express numeric data values should be sensible for data efficiency and readability. However the decimal precision of the data does not imply its underlying accuracy or precision.
 
@@ -170,31 +196,8 @@ is the same as:
 }
 ```
 
-## Recommendations
+## 3. Recommendations
 
-### Squashing singleton dimensions
-It is recommended by not required to squash any singleton dimensions and to remove those from the variable definition.
+### 3.1 Squashing singleton dimensions
+It is recommended but not required to squash any singleton dimensions and to remove those from the variable definitions. For example in the case of a timeseries at a single point, just the time dimensions can be defined, with the longitude and latitude of the site as dimensionless variables.
 
-### Missing values
-Missing values can be defined with specific numeric or string values rather than using `null`. A `missing_value` attribute should be defined for the variable. 
-
-Example:
-``` Javascript
-{
-    ...
-    "variables": {
-        "tmp2m": {
-            "dimensions": ["time","latitude","longitude"],
-            "missing_value": -9999
-        }
-    ...
-    "data": {
-        "tmp2m": [
-            [[1.2,3.4,-9999 ...],
-             [2.3,-9999,8.7 ...],
-             ...
-            ],
-        ]
-    ...
-}
-```
