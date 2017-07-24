@@ -10,7 +10,7 @@ Version 0.1
 CF-JSON is a JSON format primarily intended for encoding climate and weather data. The format supports data defined on arbitrary spatial domains such as grids, at points or along tracks. The format is self describing, meaning that all necessary spatial and temporal coordinate data is carried within the overall data object itself.
 
 ### 1.2 Relationship with CF-conventions
-CF-JSON is an application of [NetCDF CF-conventions](http://cfconventions.org) to the JSON format. It uses all of the fundamental data structures and components of CF-NetCDF. As JSON does not support all of the NetCDF datatypes, there is not a one-to-one CF-JSON should be capable of expressing 
+CF-JSON is an application of [NetCDF CF-conventions](http://cfconventions.org) to the JSON format. It uses all of the fundamental data structures and components of CF-NetCDF. As JSON does not support all of the NetCDF datatypes, there is not a one-to-one mapping, however CF-JSON should be capable of expressing the data in any NetCDF file.
 
 ### 1.3 Definitions
 The terms JSON, object, member, name, value, array number, true, false and null all correspond to the terms definied in [RFC7159](https://tools.ietf.org/html/rfc7159).
@@ -155,7 +155,7 @@ Example:
 The number of significant figures used to express numeric data values should be sensible for data efficiency and readability. However the decimal precision of the data does not imply its underlying accuracy or precision.
 
 #### Time
-Time data should be expressed as numeric values relative to a start time as in CF-conventions or as [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) strings.
+Time data should be expressed as numeric values relative to a start time as in CF-conventions OR as an array of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) strings.
 
 Example:
 ```Javascript
