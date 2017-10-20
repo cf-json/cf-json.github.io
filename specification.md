@@ -37,17 +37,17 @@ Example CF-JSON object for some wind data data arranged on a grid:
             "shape": ["longitude"],
             "type": "float",
             "attributes": {
-                "units": "degress_east"
+                "units": "degrees_east"
             },
-            "data": [ 0.2,  0.4,  0.6,  0.8,  1.0,  1.2,  1.4,  1.6,  1.8]
+            "data": [ 0.2,  0.4,  0.6,  0.8,  1.0,  1.2,  1.4,  1.6,  1.8,  2.0]
         },
         "latitude": {
             "shape": ["latitude"],
             "type": "float",
             "attributes": {
-                "units": "degress_north"
+                "units": "degrees_north"
             },
-            "data":[ 30.2,  30.4,  30.6,  30.8,  31.0,  31.2,  31.4,  31.6,  31.8,  32.0]
+            "data":[ 30.2,  30.4,  30.6,  30.8,  31.0,  31.2,  31.4,  31.6]
         },
         "wind_east": {
             "shape": ["latitude", "longitude"],
