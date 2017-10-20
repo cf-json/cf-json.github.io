@@ -196,4 +196,4 @@ is the same as:
 ## 3. Recommendations
 
 ### 3.1 Units
-
+Currently there is no specification around units but is recommended to use [udunits](https://www.unidata.ucar.edu/software/udunits/) compatible identifiers.
