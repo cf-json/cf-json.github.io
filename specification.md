@@ -17,7 +17,7 @@ The terms JSON, object, member, name, value, array number, true, false and null 
 The terminology defined in Section 1.2 of the NetCDF CF-conventions document is also used here for specific components of data structures or spatial entities.
 
 ## 2. CF-JSON object
-A CF-JSON object represents a set of data referenced in space and (optionally) time. Data is specified as `variables` on defined `dimensions`. Global or variable `attributes` can be attached to the overall CF-JSON object or to individual `variables`. A CF-JSON object MUST contain `attributes`, `dimensions` and `variables` objects.
+A CF-JSON object represents a set of data referenced in space and (optionally) time. Data is specified as `variables` on defined `dimensions`. Global or variable `attributes` can be attached to the overall CF-JSON object or to individual `variables`. A CF-JSON object MUST contain `dimensions` and `variables` objects and optionally a global `attributes` object.
 
 Example CF-JSON object for some wind data data arranged on a grid:
 
