@@ -153,7 +153,7 @@ Example:
 The number of significant figures used to express numeric data values should be sensible for data efficiency and readability. However the decimal precision of the data itself does not imply its underlying accuracy or precision. If a reversable transformation from NetCDF is required, the number of decimals must support the precision of the data type.
 
 #### 2.3.4 Time
-Time data should be expressed as numeric values relative to a start time as in CF-conventions OR as an array of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) strings.
+Time data should be expressed as numeric values relative to a start time as in CF-conventions OR as an array of [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) strings. Note that ISO8601 uses the Gregorian calendar, while CF by default uses a mixed Gregorian/Julian calendar, which may lead to differences in interpretation for dates before 1582-10-15 or climatological data specified relative to year zero (see ISO8601 section 4.3.2.1 and CF sections 4.4.1 and 7.4).
 
 Example:
 ```Javascript
